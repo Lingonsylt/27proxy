@@ -1,0 +1,94 @@
+body {
+    min-width: 0 !important;
+    width: 100%;
+}
+
+.menu {
+    margin-bottom: 5px !important;
+}
+
+#header #tr-search-box  {
+    float: none;
+    clear: both;
+}
+
+#header #tr-search-box #searchbox {
+    width: auto !important;
+    background-repeat: repeat !important;
+}
+
+#header #tr-search-box #searchbox .search_text {
+    width: 95% !important;
+}
+
+.infobox {
+    min-width: 0 !important;
+}
+
+.container {
+    min-width: 0 !important;
+}
+
+.darkbox {
+    min-width: 0 !important;
+}
+
+.w55 {
+    width: 100%;
+}
+
+.w55 .centered {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    padding-right: 10px;
+}
+
+.w45 {
+    width: 100%;
+}
+
+#crags-show .main table {
+    width: 100%;
+}
+
+#crags-show .main table tr {
+    /*display: block;*/
+}
+
+#crags-show .main table td {
+    display: block;
+    float: left;
+    margin-right: -10px;
+}
+
+#crags-show .main table td:first-child {
+    width: 100%;
+    max-width: none;
+}
+
+#crags-show .main table td:nth-child(2) {
+    clear: both;
+}
+
+#crags-show .main table td:not(:first-child) {
+    width: 24.9%;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+table.data .stxt {
+    min-width: 0;
+}
+
+.darkbox .overhang .container .map a {
+    width: 100%;
+}
+
+.overhang .container table td:first-child {
+    display: none;
+}
+
+.overhang .container table td:last-child {
+    display: none;
+}
