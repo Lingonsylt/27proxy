@@ -22,15 +22,61 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header(header, value)
 
         if r.headers.get('content-type', "").startswith('text/html'):
-            self.send_header("Content-Length", len(r.content))
-            self.end_headers()
-
             if DEBUG:
                 with open('responsive.css') as f:
                     responsive_css = f.read()
-            self.wfile.write(r.content.replace("</head>",
-                                               "<meta name=\"viewport\" content=\"width=device-width\">\n" +
-                                               "<style type=\"text/css\">\n%s\n</style>\n</head>" % responsive_css))
+            content = r.content.replace(
+                '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">',
+                '<meta name="viewport" content="width=device-width">\n' +
+                '<style type="text/css">\n%s\n</style>\n' % responsive_css +
+                '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">')
+
+            content = content.replace(
+                '</head>', """
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        var canvas = $(".topobox canvas");
+                        var canvas_width = canvas.width();
+                        setTimeout(function() {
+                        $("head").append(" \
+                            <style type='text/css'> \
+                                .pics .topobox { \
+                                    width: 100% !important; \
+                                } \
+                                \
+                                .pics .topobox { \
+                                    height: auto !important; \
+                                } \
+                                \
+                                .topobox img { \
+                                    width: 100%; \
+                                    height: auto; \
+                                } \
+                                \
+                                .topobox canvas { \
+                                    width: 100%; \
+                                } \
+                            </style> \
+                        ");
+
+                        var new_canvas_width = canvas.width();
+                        var ratio = new_canvas_width / canvas_width;
+                        $(".topobox .nbr").each(function() {
+                            var jq_elem = $(this);
+                            var left = parseInt(jq_elem.css('left'), 10);
+                            jq_elem.css("left", Math.round(left * ratio) + "px");
+                            var top = parseInt(jq_elem.css('top'), 10);
+                            jq_elem.css("top", Math.round(top * ratio) + "px");
+                        });
+                        }, 0);
+                    });
+                </script>
+                </head>""")
+
+            self.send_header("Content-Length", len(content))
+            self.end_headers()
+
+            self.wfile.write(content)
 
         else:
             if r.headers.get('content-type', "").startswith('application/json'):
