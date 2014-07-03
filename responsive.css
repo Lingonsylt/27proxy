@@ -1,3 +1,9 @@
+#map {
+ display: none;
+}
+
+@media screen and (max-width: 600px) { /*handheld and (max-width: 600px) and (orientation: portrait), */
+
 body {
     min-width: 0 !important;
     width: 100%;
@@ -64,11 +70,26 @@ body {
     margin-left: 0;
     margin-right: 0;
     display: block;
-    padding-right: 10px;
+    padding-right: 0;
 }
 
 .w45 {
     width: 100%;
+}
+
+.rcol {
+    margin-left: 0 !important;
+    max-width: none !important;
+}
+
+
+#crags-show .main .rcol table td {
+    text-align: left;
+    padding-left: 8px;
+}
+
+#topos-show .topobox, #topos-index .topobox {
+    border-style: none;
 }
 
 #crags-show .main table {
@@ -79,24 +100,24 @@ body {
     /*display: block;*/
 }
 
-#crags-show .main table td {
+#crags-show .main .w55 table td {
     display: block;
     float: left;
     margin-right: -10px;
 }
 
-#crags-show .main table td:first-child {
+#crags-show .main .w55 table td:first-child {
     width: 90%;
     max-width: none;
     margin-left: -30px;
     padding-left: 30px;
 }
 
-#crags-show .main table td:nth-child(2) {
+#crags-show .main .w55  table td:nth-child(2) {
     clear: both;
 }
 
-#crags-show .main table td:not(:first-child) {
+#crags-show .main .w55 table td:not(:first-child) {
     width: 24.9%;
     margin-left: -10px;
     margin-right: -11px;
@@ -104,6 +125,31 @@ body {
 
 table.data .stxt {
     min-width: 0;
+}
+
+table.crags td {
+    text-align: left;
+    padding-left: 8px;
+}
+
+table.crags {
+    width: 100%;
+}
+
+table.crags th:nth-child(n+3):nth-child(-n+8), table.crags th:nth-child(10), table.crags th:nth-child(n+12):nth-child(-n+13),
+table.crags td:nth-child(n+3):nth-child(-n+8), table.crags td:nth-child(10), table.crags td:nth-child(n+12):nth-child(-n+13) {
+    display: none;
+}
+
+.foldout {
+    font-style: italic;
+    font-size: smaller;
+    color: white;
+    padding: 5px !important;
+}
+
+.foldout span {
+    color: lightgray;
 }
 
 .darkbox .overhang .container .map a {
@@ -116,6 +162,40 @@ table.data .stxt {
 
 .overhang .container table td:last-child {
     display: none;
+}
+
+#header #logomenu a:nth-child(2) {
+    clear: both;
+    background: none;
+}
+
+.colbox.container {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.m10 {
+    margin: 0;
+}
+
+.m10 .t14 .left {
+    float: none;
+}
+
+.post {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 5px !important;
+}
+
+.sidebar {
+    padding-right: 0 !important;
+}
+
+.card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .colbox .post {
@@ -155,16 +235,19 @@ table.data .stxt {
     color: #b4bae5;
 }
 
-/*
-.pics .topobox {
-    width: 100% !important;
+.hr_top {
+    min-width: 0;
 }
 
-.pics .topobox {
-    height: auto !important;
+.topo_hr {
+    min-width: 0 !important;
 }
 
-#route_pages-show .pics .topobox img {
-    width: 100%;
-    height: auto;
-} */
+.ad {
+    width: 95%;
+}
+
+.ad .big {
+    font-size: 1.5em;
+}
+}
