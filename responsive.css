@@ -250,4 +250,12 @@ table.crags td:nth-child(n+3):nth-child(-n+8), table.crags td:nth-child(10), tab
 .ad .big {
     font-size: 1.5em;
 }
+
+.post.adspace iframe {
+    width: 100% !important;
+}
+
+.post.adspace ins {
+    width: 100% !important;
+}
 }
