@@ -280,5 +280,7 @@ table.plans td.who + td {
 
 .post.adspace ins {
     width: 100% !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 }
