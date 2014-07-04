@@ -141,6 +141,24 @@ table.crags td:nth-child(n+3):nth-child(-n+8), table.crags td:nth-child(10), tab
     display: none;
 }
 
+table.plans {
+    margin: 0;
+}
+
+table.plans td {
+    float: left;
+    display: block;
+}
+
+table.plans td.who {
+    width: auto !important;
+    margin-top: 5px;
+}
+
+table.plans td.who + td {
+    margin-top: 5px;
+}
+
 .foldout {
     font-style: italic;
     font-size: smaller;
@@ -221,11 +239,16 @@ table.crags td:nth-child(n+3):nth-child(-n+8), table.crags td:nth-child(10), tab
 }
 
 #uservoice-feedback-tab {
+    position: inherit;
     top: auto;
     left: auto;
     right: 0;
     bottom: 0;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
+    margin-left: 45px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
 }
 .lastline .pale {
     color: #45464e;
