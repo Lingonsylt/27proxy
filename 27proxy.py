@@ -72,6 +72,9 @@ class Handler(BaseHTTPRequestHandler):
                 '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\n'
                 '<script src="/early.js" type="text/javascript"></script>\n')
 
+            content = content.replace('AIzaSyDl0cdA0POqysJWbXxf883-thJXMt_4DcU',
+                                      'AIzaSyDDKkln1dq-XOzXzJ4AyZYdyjew3F2dpZw')
+
             content = content.replace(
                 '</head>',
                 '<script src="/late.js" type="text/javascript"></script>\n'

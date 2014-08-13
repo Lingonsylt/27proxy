@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     $("head").append("\
         <style type='text/css'> \
-        @media screen and (max-width: 600px) { \
+        @media screen and (orientation: landscape) and (max-width: 640px), screen and (max-width: 600px) { \
             .topobox { \
                 width: 100% !important; \
             } \

@@ -1,13 +1,19 @@
-#map {
- display: none;
-}
 
-@media screen and (max-width: 600px) { /*handheld and (max-width: 600px) and (orientation: portrait), */
+
+@media screen and (orientation: landscape) and (max-width: 640px), screen and (max-width: 600px) {
 
 body {
     min-width: 0 !important;
     width: 100%;
     background-color: #45464e;
+}
+
+#map {
+    margin: 0;
+}
+
+#map.area {
+    margin: 0;
 }
 
 .container {
@@ -90,6 +96,7 @@ body {
 
 #topos-show .topobox, #topos-index .topobox {
     border-style: none;
+    overflow-x: hidden;
 }
 
 #crags-show .main table {
