@@ -194,11 +194,30 @@ table.plans td.who + td {
     background: none;
 }
 
-.colbox.container {
-    padding-left: 5px;
-    padding-right: 5px;
+.colbox .post {
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+    border-radius: 0;
 }
 
+.colbox .post h3 {
+    margin-left: 10px;
+}
+
+.colbox .post .m10 {
+    padding: 5px;
+    /*margin-left: -20px;*/
+}
+
+#route_pages-show .pics {
+    margin-top: -20px;
+}
+
+#route_pages-show .pics img {
+    border: 0;
+    border-radius: 0;
+}
 
 .m10 {
     margin: 0;
@@ -259,6 +278,20 @@ table.plans td.who + td {
 }
 .lastline .pale {
     color: #45464e;
+}
+
+.sharetools {
+    position: inherit !important;
+    margin: 2px !important;
+}
+
+.cards .card {
+    border: none;
+    border-radius: 0;
+}
+
+.cards .card img {
+    border: none;
 }
 
 .lastline a {
