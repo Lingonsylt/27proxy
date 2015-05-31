@@ -10,7 +10,8 @@ DEBUG = "PROXY27_DEBUG" in os.environ
 
 class StaticFileServer:
     MIMES = {'css': 'text/css',
-             'js': 'text/javascript'}
+             'js': 'text/javascript',
+	     'txt': 'text/plain'}
 
     def __init__(self):
         self.files = {}
@@ -37,6 +38,7 @@ sfs = StaticFileServer()
 sfs.addFile("responsive.css")
 sfs.addFile("early.js")
 sfs.addFile("late.js")
+sfs.addFile("robots.txt")
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
