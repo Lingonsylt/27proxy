@@ -323,4 +323,36 @@ table.plans td.who + td {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+.auth_services {
+    padding: 5px;
+    min-width: inherit;
+}
+
+.auth_services form {
+    padding-right: 0 !important;
+}
+
+.auth_services .rof {
+    position: inherit;
+    right: inherit;
+    top: inherit;
+}
+
+.auth_services .services {
+    padding: 0;
+}
+
+.auth_services .left {
+    float: none;
+}
+
+.auth_services .divider {
+    display: none;
+}
+
+.auth_services .tac {
+    text-align: left;
+}
+
 }
