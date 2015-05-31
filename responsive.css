@@ -194,11 +194,30 @@ table.plans td.who + td {
     background: none;
 }
 
-.colbox.container {
-    padding-left: 5px;
-    padding-right: 5px;
+.colbox .post {
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+    border-radius: 0;
 }
 
+.colbox .post h3 {
+    margin-left: 10px;
+}
+
+.colbox .post .m10 {
+    padding: 5px;
+    /*margin-left: -20px;*/
+}
+
+#route_pages-show .pics {
+    margin-top: -20px;
+}
+
+#route_pages-show .pics img {
+    border: 0;
+    border-radius: 0;
+}
 
 .m10 {
     margin: 0;
@@ -261,6 +280,20 @@ table.plans td.who + td {
     color: #45464e;
 }
 
+.sharetools {
+    position: inherit !important;
+    margin: 2px !important;
+}
+
+.cards .card {
+    border: none;
+    border-radius: 0;
+}
+
+.cards .card img {
+    border: none;
+}
+
 .lastline a {
     color: #b4bae5;
 }
@@ -290,4 +323,36 @@ table.plans td.who + td {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+.auth_services {
+    padding: 5px;
+    min-width: inherit;
+}
+
+.auth_services form {
+    padding-right: 0 !important;
+}
+
+.auth_services .rof {
+    position: inherit;
+    right: inherit;
+    top: inherit;
+}
+
+.auth_services .services {
+    padding: 0;
+}
+
+.auth_services .left {
+    float: none;
+}
+
+.auth_services .divider {
+    display: none;
+}
+
+.auth_services .tac {
+    text-align: left;
+}
+
 }
