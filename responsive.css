@@ -45,15 +45,40 @@ body {
 #header #tr-search-box  {
     float: none;
     clear: both;
+    margin-top: 5px;
+    position: inherit;
 }
 
 #header #tr-search-box #searchbox {
-    width: auto !important;
-    background-repeat: repeat !important;
+    position: relative;
+    width: 100% !important;
+    margin-left: -14px;
+    margin-right: -14px;
+    background: none !important;
 }
 
 #header #tr-search-box #searchbox .search_text {
-    width: 95% !important;
+    width: 100% !important;
+    position: inherit !important;
+    margin: 0 !important;
+    border: none !important;
+    height: 16px !important;
+    font-size: 150% !important;
+}
+
+.autocomplete-suggestions {
+    width: 100% !important;
+    font-size: 150%;
+    border: none;
+}
+
+.autocomplete-suggestion {
+    border-top: 1px solid lightgray;
+}
+
+#search_submit {
+    right: -33px !important;
+    margin-top: 1px !important;
 }
 
 .infobox {
@@ -99,8 +124,17 @@ body {
     overflow-x: hidden;
 }
 
+#crags-show .main .w55 .centered {
+    margin-left: 5px;
+}
+
+#crags-show .main .w55 h3 {
+    margin-left: 0;
+}
+
 #crags-show .main table {
     width: 100%;
+    margin-left: 0 !important;
 }
 
 #crags-show .main table tr {
@@ -125,7 +159,7 @@ body {
 }
 
 #crags-show .main .w55 table td:not(:first-child) {
-    width: 24.9%;
+    width: 24.5%;
     margin-left: -10px;
     margin-right: -11px;
 }
